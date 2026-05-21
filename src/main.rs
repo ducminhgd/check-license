@@ -10,8 +10,8 @@ use application::{ports::KnowledgeBase, use_cases::scan_and_check::ScanAndCheckU
 use infrastructure::knowledge_base::bundled::BundledKnowledgeBase;
 use presentation::table::TableRenderer;
 
-#[cfg(not(target_os = "macos"))]
-compile_error!("Only macOS is supported in Phase 1. Windows and Linux support is planned.");
+#[cfg(not(any(target_os = "macos", target_os = "linux", target_os = "windows")))]
+compile_error!("Unsupported operating system. Only macOS, Linux, and Windows are currently supported.");
 
 #[derive(Parser)]
 #[command(
@@ -27,18 +27,32 @@ struct Cli {
 
 fn main() -> Result<()> {
     let cli = Cli::parse();
-
     let kb = BundledKnowledgeBase::load().context("Failed to load knowledge base")?;
+    dispatch(cli, &kb)
+}
 
-    #[cfg(target_os = "macos")]
-    {
-        use infrastructure::platform::macos::{
-            activation::MacOsActivationChecker, scanner::MacOsAppScanner,
-        };
-        let scanner = MacOsAppScanner;
-        let checker = MacOsActivationChecker;
-        run(cli, &kb, &scanner, &checker)
-    }
+#[cfg(target_os = "macos")]
+fn dispatch(cli: Cli, kb: &dyn application::ports::KnowledgeBase) -> Result<()> {
+    use infrastructure::platform::macos::{
+        activation::MacOsActivationChecker, scanner::MacOsAppScanner,
+    };
+    run(cli, kb, &MacOsAppScanner, &MacOsActivationChecker)
+}
+
+#[cfg(target_os = "linux")]
+fn dispatch(cli: Cli, kb: &dyn application::ports::KnowledgeBase) -> Result<()> {
+    use infrastructure::platform::linux::{
+        activation::LinuxActivationChecker, scanner::LinuxAppScanner,
+    };
+    run(cli, kb, &LinuxAppScanner, &LinuxActivationChecker)
+}
+
+#[cfg(target_os = "windows")]
+fn dispatch(cli: Cli, kb: &dyn application::ports::KnowledgeBase) -> Result<()> {
+    use infrastructure::platform::windows::{
+        activation::WindowsActivationChecker, scanner::WindowsAppScanner,
+    };
+    run(cli, kb, &WindowsAppScanner, &WindowsActivationChecker)
 }
 
 fn run(

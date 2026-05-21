@@ -96,7 +96,7 @@ impl<'a> ScanAndCheckUseCase<'a> {
     }
 
     fn check_hosts_entries(&self, domains: &[String]) -> bool {
-        let Ok(content) = std::fs::read_to_string("/etc/hosts") else {
+        let Ok(content) = std::fs::read_to_string(hosts_file_path()) else {
             return false;
         };
         domains.iter().any(|domain| content.contains(domain.as_str()))
@@ -145,4 +145,18 @@ impl<'a> ScanAndCheckUseCase<'a> {
     fn bundle_id_matches(&self, _plist_path: &std::path::Path, _bundle_ids: &[String]) -> bool {
         false
     }
+}
+
+fn hosts_file_path() -> std::path::PathBuf {
+    #[cfg(target_os = "windows")]
+    {
+        let root = std::env::var("SYSTEMROOT").unwrap_or_else(|_| r"C:\Windows".to_string());
+        std::path::PathBuf::from(root)
+            .join("System32")
+            .join("drivers")
+            .join("etc")
+            .join("hosts")
+    }
+    #[cfg(not(target_os = "windows"))]
+    std::path::PathBuf::from("/etc/hosts")
 }

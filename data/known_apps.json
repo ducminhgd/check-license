@@ -496,6 +496,328 @@
       "license_model": "Free",
       "work_allowed": true,
       "notes": "Free Vietnamese input method for macOS"
+    },
+    {
+      "bundle_id": "org.mozilla.firefox",
+      "name": "Firefox",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "Mozilla Public License 2.0"
+    },
+    {
+      "bundle_id": "com.google.Chrome",
+      "name": "Google Chrome",
+      "license_model": "Free",
+      "work_allowed": true,
+      "notes": "Free for personal and commercial use"
+    },
+    {
+      "bundle_id": "com.microsoft.VSCode",
+      "name": "Visual Studio Code",
+      "license_model": "Free",
+      "work_allowed": true,
+      "notes": "MIT-licensed; free for personal and commercial use"
+    },
+    {
+      "bundle_id": "com.slack.Slack",
+      "name": "Slack",
+      "license_model": "Freemium",
+      "work_allowed": true,
+      "notes": "Free plan has message history limits; paid plan required for full functionality"
+    },
+    {
+      "bundle_id": "com.discordapp.Discord",
+      "name": "Discord",
+      "license_model": "Free",
+      "work_allowed": true,
+      "notes": "Free for personal and commercial use"
+    },
+    {
+      "bundle_id": "com.spotify.Client",
+      "name": "Spotify",
+      "license_model": "Freemium",
+      "work_allowed": false,
+      "notes": "Free tier has ads and shuffle-only; Spotify Premium required for commercial/background use"
+    },
+    {
+      "bundle_id": "com.github.Eloston.UngoogledChromium",
+      "name": "Ungoogled Chromium",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "BSD License; free for personal and commercial use"
+    },
+    {
+      "bundle_id": "com.jetbrains.IntelliJ-IDEA-Community",
+      "name": "IntelliJ IDEA Community Edition",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "Apache 2.0; Community edition is free for personal and commercial use"
+    },
+    {
+      "bundle_id": "com.jetbrains.IntelliJ-IDEA-Ultimate",
+      "name": "IntelliJ IDEA Ultimate",
+      "license_model": "Paid",
+      "work_allowed": true,
+      "notes": "Requires a JetBrains license"
+    },
+    {
+      "bundle_id": "com.jetbrains.PyCharm-CE",
+      "name": "PyCharm Community Edition",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "Apache 2.0; Community edition is free for personal and commercial use"
+    },
+    {
+      "bundle_id": "com.jetbrains.PyCharm-Professional",
+      "name": "PyCharm Professional",
+      "license_model": "Paid",
+      "work_allowed": true,
+      "notes": "Requires a JetBrains license"
+    },
+    {
+      "bundle_id": "rest.insomnia.Insomnia",
+      "name": "Insomnia",
+      "license_model": "Freemium",
+      "work_allowed": true,
+      "notes": "Open-source core; paid plans for collaboration"
+    },
+    {
+      "bundle_id": "com.getpostman.Postman",
+      "name": "Postman",
+      "license_model": "Freemium",
+      "work_allowed": true,
+      "notes": "Free plan available; paid plans for team features"
+    },
+    {
+      "bundle_id": "com.usebruno.Bruno",
+      "name": "Bruno",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "MIT-licensed API client; free for personal and commercial use"
+    },
+    {
+      "bundle_id": "io.dbeaver.DBeaverCommunity",
+      "name": "DBeaver Community",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "Apache 2.0; free for personal and commercial use"
+    },
+    {
+      "bundle_id": "io.dbeaver.DBeaverEnterprise",
+      "name": "DBeaver Enterprise",
+      "license_model": "Paid",
+      "work_allowed": true,
+      "notes": "Requires a DBeaver Enterprise license"
+    },
+    {
+      "bundle_id": "org.gimp.GIMP",
+      "name": "GIMP",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "GPL-3.0; free for personal and commercial use"
+    },
+    {
+      "bundle_id": "org.inkscape.Inkscape",
+      "name": "Inkscape",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "GPL-2.0; free for personal and commercial use"
+    },
+    {
+      "bundle_id": "org.libreoffice.LibreOffice",
+      "name": "LibreOffice",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "MPL-2.0; free for personal and commercial use"
+    },
+    {
+      "bundle_id": "com.visualstudio.code",
+      "name": "Visual Studio Code",
+      "license_model": "Free",
+      "work_allowed": true,
+      "notes": "MIT-licensed; free for personal and commercial use"
+    },
+    {
+      "bundle_id": "org.telegram.desktop",
+      "name": "Telegram",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "GPL-2.0; free for personal and commercial use"
+    },
+    {
+      "bundle_id": "io.github.shiftey.Desktop",
+      "name": "GitHub Desktop",
+      "license_model": "Free",
+      "work_allowed": true,
+      "notes": "MIT-licensed; free for personal and commercial use"
+    },
+    {
+      "bundle_id": "dev.zed.Zed",
+      "name": "Zed",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "GPL-3.0 / AGPL-3.0; free for personal and commercial use"
+    },
+    {
+      "bundle_id": null,
+      "name": "Windows Terminal",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "MIT-licensed; free for personal and commercial use"
+    },
+    {
+      "bundle_id": null,
+      "name": "Notepad++",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "GPL-2.0; free for personal and commercial use"
+    },
+    {
+      "bundle_id": null,
+      "name": "7-Zip",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "LGPL-2.1; free for personal and commercial use"
+    },
+    {
+      "bundle_id": null,
+      "name": "WinRAR",
+      "license_model": "Freemium",
+      "work_allowed": false,
+      "notes": "Free trial; paid license required for commercial use"
+    },
+    {
+      "bundle_id": null,
+      "name": "VLC media player",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "GPL-2.0; free for personal and commercial use"
+    },
+    {
+      "bundle_id": null,
+      "name": "ShareX",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "GPL-3.0; free for personal and commercial use"
+    },
+    {
+      "bundle_id": null,
+      "name": "Everything",
+      "license_model": "Free",
+      "work_allowed": true,
+      "notes": "Free for personal and commercial use"
+    },
+    {
+      "bundle_id": null,
+      "name": "Snipaste",
+      "license_model": "Freemium",
+      "work_allowed": true,
+      "notes": "Free tier available for personal and commercial use; Snipaste Pro adds advanced features"
+    },
+    {
+      "bundle_id": null,
+      "name": "PowerToys",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "MIT-licensed Microsoft utility suite; free for personal and commercial use"
+    },
+    {
+      "bundle_id": null,
+      "name": "Git",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "GPL-2.0; free for personal and commercial use"
+    },
+    {
+      "bundle_id": null,
+      "name": "GitHub Desktop",
+      "license_model": "Free",
+      "work_allowed": true,
+      "notes": "MIT-licensed; free for personal and commercial use"
+    },
+    {
+      "bundle_id": null,
+      "name": "Docker Desktop",
+      "license_model": "Freemium",
+      "work_allowed": false,
+      "notes": "Free for personal use and small businesses (<250 employees, <$10M revenue); paid subscription required otherwise"
+    },
+    {
+      "bundle_id": null,
+      "name": "Microsoft Visual Studio Code",
+      "license_model": "Free",
+      "work_allowed": true,
+      "notes": "MIT-licensed; free for personal and commercial use"
+    },
+    {
+      "bundle_id": null,
+      "name": "Discord",
+      "license_model": "Free",
+      "work_allowed": true,
+      "notes": "Free for personal and commercial use"
+    },
+    {
+      "bundle_id": null,
+      "name": "Telegram Desktop",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "GPL-3.0; free for personal and commercial use"
+    },
+    {
+      "bundle_id": null,
+      "name": "Slack",
+      "license_model": "Freemium",
+      "work_allowed": true,
+      "notes": "Free plan has message history limits; paid plan required for full functionality"
+    },
+    {
+      "bundle_id": null,
+      "name": "Zoom",
+      "license_model": "Freemium",
+      "work_allowed": false,
+      "notes": "Free plan restricted to 40-minute meetings; paid license required for commercial use without limits"
+    },
+    {
+      "bundle_id": null,
+      "name": "OBS Studio",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "GPL-2.0; free for personal and commercial use"
+    },
+    {
+      "bundle_id": null,
+      "name": "Figma",
+      "license_model": "Freemium",
+      "work_allowed": false,
+      "notes": "Free plan prohibits commercial use; Starter/Professional plan required for work"
+    },
+    {
+      "bundle_id": null,
+      "name": "Notion",
+      "license_model": "Freemium",
+      "work_allowed": true,
+      "notes": "Free tier available; paid plans for teams and advanced features"
+    },
+    {
+      "bundle_id": null,
+      "name": "Postman",
+      "license_model": "Freemium",
+      "work_allowed": true,
+      "notes": "Free plan available; paid plans for team features"
+    },
+    {
+      "bundle_id": null,
+      "name": "Insomnia",
+      "license_model": "Freemium",
+      "work_allowed": true,
+      "notes": "Open-source core; paid plans for collaboration"
+    },
+    {
+      "bundle_id": null,
+      "name": "Bruno",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "MIT-licensed API client; free for personal and commercial use"
     }
   ]
 }

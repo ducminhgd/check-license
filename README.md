@@ -14,8 +14,8 @@ A table with columns:
 ## OS Supported
 
 - [x] MacOS
-- [ ] Windows
-- [ ] Linux
+- [x] Windows
+- [x] Linux
 
 ## Prerequisites
 
