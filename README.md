@@ -1,5 +1,8 @@
 # Check License
 
+> [!WARNING]  
+> After complete vibe-coding, I found that this tool is nearly useless without the data/known_apps.json or when running without AI
+
 A CLI tool that audits installed applications on your machine, identifies their license type, and flags suspected crack software or apps not permitted for commercial use.
 
 ## How it works
