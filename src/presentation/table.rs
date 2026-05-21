@@ -35,7 +35,12 @@ impl TableRenderer {
 
             let version_str = result.entry.version.as_deref().unwrap_or("—");
 
-            let license_cell = Cell::new(result.license_model.to_string());
+            let license_str = result
+                .spdx
+                .as_deref()
+                .unwrap_or(&result.license_model.to_string())
+                .to_string();
+            let license_cell = Cell::new(license_str);
 
             let activation_cell = Cell::new(result.activation_status.to_string());
 

@@ -1,7 +1,7 @@
 use crate::domain::{
     app_entry::AppEntry,
     error::{KnowledgeBaseError, ScanError},
-    license::ActivationStatus,
+    license::{ActivationStatus, LicenseModel},
 };
 use serde::Deserialize;
 
@@ -21,8 +21,11 @@ pub struct CrackIndicators {
 pub struct AppRecord {
     pub bundle_id: Option<String>,
     pub name: String,
-    pub license_model: crate::domain::license::LicenseModel,
+    pub license_model: LicenseModel,
     pub work_allowed: bool,
+    /// SPDX license identifier, e.g. "MIT", "GPL-2.0-only", "Proprietary".
+    #[serde(default)]
+    pub spdx: Option<String>,
     #[serde(default)]
     pub notes: Option<String>,
     #[serde(default)]
@@ -39,5 +42,28 @@ pub trait KnowledgeBase {
 }
 
 pub trait ActivationChecker {
-    fn check(&self, entry: &AppEntry, record: &AppRecord) -> ActivationStatus;
+    /// Determine the activation status of an app given its resolved license model.
+    /// Does not require a KB record — works for any scanned entry.
+    fn check(&self, entry: &AppEntry, license_model: &LicenseModel) -> ActivationStatus;
+}
+
+pub trait PackageLicenseProvider {
+    /// Returns the SPDX license expression for the app, or None if unknown.
+    fn lookup_spdx(&self, name: &str, bundle_id: Option<&str>) -> Option<String>;
+}
+
+/// Data returned by an online license lookup.
+pub struct OnlineLicenseInfo {
+    pub license_model: LicenseModel,
+    pub work_allowed: bool,
+    /// SPDX identifier when the remote source provides one, e.g. "GPL-3.0-only".
+    pub spdx: Option<String>,
+    /// Human-readable note appended to the Notes column, e.g. "Flathub (GPL-3.0-only)".
+    pub source: String,
+}
+
+pub trait OnlineLicenseProvider {
+    /// Query an internet source for license/pricing information about the app.
+    /// Returns None if the app cannot be found or the request fails.
+    fn lookup(&self, entry: &AppEntry) -> Option<OnlineLicenseInfo>;
 }

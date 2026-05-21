@@ -1,48 +1,58 @@
 use crate::{
-    application::ports::{ActivationChecker, AppRecord},
-    domain::{
-        app_entry::AppEntry,
-        license::{ActivationStatus, LicenseModel},
-    },
+    application::ports::ActivationChecker,
+    domain::{app_entry::AppEntry, license::{ActivationStatus, LicenseModel}},
 };
+use std::path::Path;
 
 pub struct LinuxActivationChecker;
 
 impl ActivationChecker for LinuxActivationChecker {
-    fn check(&self, entry: &AppEntry, record: &AppRecord) -> ActivationStatus {
-        if matches!(record.license_model, LicenseModel::Free | LicenseModel::OpenSource) {
-            return ActivationStatus::NotApplicable;
-        }
+    fn check(&self, entry: &AppEntry, license_model: &LicenseModel) -> ActivationStatus {
+        match license_model {
+            LicenseModel::Free | LicenseModel::OpenSource | LicenseModel::Freemium => {
+                ActivationStatus::NotApplicable
+            }
 
-        if record.license_model == LicenseModel::Paid {
-            if let Some(home) = dirs::home_dir() {
-                let app_slug = entry.name.replace(' ', "");
-                let candidates = [
-                    home.join(".config").join(&app_slug),
-                    home.join(".local/share").join(&app_slug),
+            LicenseModel::Paid => {
+                let Some(home) = dirs::home_dir() else {
+                    return ActivationStatus::Unactivated;
+                };
+
+                let name_slug = entry.name.replace(' ', "");
+                let bundle_id = entry.bundle_id.as_deref().unwrap_or("");
+
+                let candidates: &[std::path::PathBuf] = &[
+                    home.join(".config").join(&name_slug),
+                    home.join(".config").join(bundle_id),
+                    home.join(".local/share").join(&name_slug),
+                    home.join(".local/share").join(bundle_id),
                 ];
-                for dir in &candidates {
-                    if dir.exists() && has_license_indicator(dir) {
+
+                for dir in candidates {
+                    if dir.exists() && has_license_file(dir) {
                         return ActivationStatus::SelfLicensed;
                     }
                 }
-            }
-            return ActivationStatus::Unactivated;
-        }
 
-        ActivationStatus::Unknown
+                ActivationStatus::Unactivated
+            }
+
+            LicenseModel::Unknown => ActivationStatus::Unknown,
+        }
     }
 }
 
-fn has_license_indicator(dir: &std::path::Path) -> bool {
+fn has_license_file(dir: &Path) -> bool {
     let Ok(entries) = std::fs::read_dir(dir) else { return false };
     for entry in entries.flatten() {
-        let name = entry.file_name();
-        let name_str = name.to_string_lossy().to_lowercase();
-        if name_str.contains("license")
-            || name_str.contains("activation")
-            || name_str.contains("registration")
-            || name_str.ends_with(".lic")
+        let fname = entry.file_name();
+        let n = fname.to_string_lossy().to_lowercase();
+        if n.contains("license")
+            || n.contains("activation")
+            || n.contains("registration")
+            || n.ends_with(".lic")
+            || n.ends_with(".license")
+            || n.ends_with(".key")
         {
             return true;
         }

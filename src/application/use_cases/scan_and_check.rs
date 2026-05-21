@@ -1,9 +1,11 @@
 use crate::{
-    application::ports::{ActivationChecker, AppScanner, KnowledgeBase},
+    application::ports::{
+        ActivationChecker, AppScanner, KnowledgeBase, OnlineLicenseProvider, PackageLicenseProvider,
+    },
     domain::{
         check_result::CheckResult,
         error::ScanError,
-        license::{ActivationStatus, LicenseModel},
+        license::{is_oss_spdx, ActivationStatus, LicenseModel},
     },
 };
 
@@ -11,6 +13,8 @@ pub struct ScanAndCheckUseCase<'a> {
     scanner: &'a dyn AppScanner,
     knowledge_base: &'a dyn KnowledgeBase,
     activation_checker: &'a dyn ActivationChecker,
+    pkg_license_provider: &'a dyn PackageLicenseProvider,
+    online_provider: &'a dyn OnlineLicenseProvider,
 }
 
 impl<'a> ScanAndCheckUseCase<'a> {
@@ -18,8 +22,10 @@ impl<'a> ScanAndCheckUseCase<'a> {
         scanner: &'a dyn AppScanner,
         knowledge_base: &'a dyn KnowledgeBase,
         activation_checker: &'a dyn ActivationChecker,
+        pkg_license_provider: &'a dyn PackageLicenseProvider,
+        online_provider: &'a dyn OnlineLicenseProvider,
     ) -> Self {
-        Self { scanner, knowledge_base, activation_checker }
+        Self { scanner, knowledge_base, activation_checker, pkg_license_provider, online_provider }
     }
 
     pub fn execute(&self) -> Result<Vec<CheckResult>, ScanError> {
@@ -27,23 +33,36 @@ impl<'a> ScanAndCheckUseCase<'a> {
         let mut results = Vec::with_capacity(entries.len());
 
         for entry in entries {
-            let record = self.knowledge_base.lookup(entry.bundle_id.as_deref(), &entry.name);
+            let kb_record = self.knowledge_base.lookup(entry.bundle_id.as_deref(), &entry.name);
 
-            let (license_model, work_allowed, mut notes, crack_indicators) = match &record {
-                Some(r) => {
+            // Resolution order: KB → package manager SPDX → online
+            let (license_model, work_allowed, spdx, mut notes, crack_indicators) =
+                if let Some(r) = &kb_record {
                     let mut n = Vec::new();
                     if let Some(note) = &r.notes {
                         n.push(note.clone());
                     }
-                    (r.license_model.clone(), r.work_allowed, n, r.crack_indicators.clone())
-                }
-                None => (LicenseModel::Unknown, true, Vec::new(), None),
-            };
+                    (
+                        r.license_model.clone(),
+                        r.work_allowed,
+                        r.spdx.clone(),
+                        n,
+                        r.crack_indicators.clone(),
+                    )
+                } else if let Some(pkg_spdx) = self
+                    .pkg_license_provider
+                    .lookup_spdx(&entry.name, entry.bundle_id.as_deref())
+                {
+                    if is_oss_spdx(&pkg_spdx) {
+                        (LicenseModel::OpenSource, true, Some(pkg_spdx), Vec::new(), None)
+                    } else {
+                        self.resolve_online(&entry, Some(pkg_spdx))
+                    }
+                } else {
+                    self.resolve_online(&entry, None)
+                };
 
-            let activation_status = match &record {
-                Some(r) => self.activation_checker.check(&entry, r),
-                None => ActivationStatus::Unknown,
-            };
+            let activation_status = self.activation_checker.check(&entry, &license_model);
 
             let crack_suspected = self.is_crack_suspected(
                 &license_model,
@@ -55,6 +74,7 @@ impl<'a> ScanAndCheckUseCase<'a> {
             results.push(CheckResult {
                 entry,
                 license_model,
+                spdx,
                 activation_status,
                 work_allowed,
                 crack_suspected,
@@ -64,6 +84,26 @@ impl<'a> ScanAndCheckUseCase<'a> {
 
         results.sort_by(|a, b| a.entry.name.to_lowercase().cmp(&b.entry.name.to_lowercase()));
         Ok(results)
+    }
+
+    /// Try the online provider; if it returns nothing fall through to Unknown.
+    /// `fallback_spdx` is a non-OSS SPDX from the package manager that we pass
+    /// along rather than discarding.
+    fn resolve_online(
+        &self,
+        entry: &crate::domain::app_entry::AppEntry,
+        fallback_spdx: Option<String>,
+    ) -> (LicenseModel, bool, Option<String>, Vec<String>, Option<crate::application::ports::CrackIndicators>) {
+        match self.online_provider.lookup(entry) {
+            Some(info) => (
+                info.license_model,
+                info.work_allowed,
+                info.spdx.or(fallback_spdx),
+                vec![info.source],
+                None,
+            ),
+            None => (LicenseModel::Unknown, true, fallback_spdx, Vec::new(), None),
+        }
     }
 
     fn is_crack_suspected(
@@ -76,7 +116,6 @@ impl<'a> ScanAndCheckUseCase<'a> {
         if *license != LicenseModel::Paid {
             return false;
         }
-        // Need both: unactivated state AND at least one positive crack indicator.
         if *activation != ActivationStatus::Unactivated {
             return false;
         }
@@ -106,7 +145,6 @@ impl<'a> ScanAndCheckUseCase<'a> {
         if bundle_ids.is_empty() {
             return false;
         }
-        // Check common app directories for crack tools by scanning Info.plist
         let search_dirs: Vec<std::path::PathBuf> = [
             std::path::PathBuf::from("/Applications"),
             dirs::home_dir().map(|h| h.join("Applications")).unwrap_or_default(),

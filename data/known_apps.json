@@ -6,6 +6,7 @@
       "name": "Adobe Photoshop",
       "license_model": "Paid",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Requires active Creative Cloud subscription",
       "crack_indicators": {
         "hosts_entries": ["activate.adobe.com", "practivate.adobe.com", "hl2rcv.adobe.com"],
@@ -17,6 +18,7 @@
       "name": "Adobe Illustrator",
       "license_model": "Paid",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Requires active Creative Cloud subscription",
       "crack_indicators": {
         "hosts_entries": ["activate.adobe.com", "practivate.adobe.com", "hl2rcv.adobe.com"],
@@ -28,6 +30,7 @@
       "name": "Adobe InDesign",
       "license_model": "Paid",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Requires active Creative Cloud subscription",
       "crack_indicators": {
         "hosts_entries": ["activate.adobe.com", "practivate.adobe.com"],
@@ -39,6 +42,7 @@
       "name": "Adobe Premiere Pro",
       "license_model": "Paid",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Requires active Creative Cloud subscription",
       "crack_indicators": {
         "hosts_entries": ["activate.adobe.com", "practivate.adobe.com"],
@@ -50,6 +54,7 @@
       "name": "Adobe After Effects",
       "license_model": "Paid",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Requires active Creative Cloud subscription",
       "crack_indicators": {
         "hosts_entries": ["activate.adobe.com", "practivate.adobe.com"],
@@ -61,6 +66,7 @@
       "name": "IntelliJ IDEA",
       "license_model": "Freemium",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Community edition is free; Ultimate requires a paid license"
     },
     {
@@ -68,6 +74,7 @@
       "name": "PyCharm",
       "license_model": "Freemium",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Community edition is free; Professional requires a paid license"
     },
     {
@@ -75,6 +82,7 @@
       "name": "CLion",
       "license_model": "Paid",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Requires a JetBrains license"
     },
     {
@@ -82,6 +90,7 @@
       "name": "GoLand",
       "license_model": "Paid",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Requires a JetBrains license"
     },
     {
@@ -89,6 +98,7 @@
       "name": "RubyMine",
       "license_model": "Paid",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Requires a JetBrains license"
     },
     {
@@ -96,6 +106,7 @@
       "name": "WebStorm",
       "license_model": "Paid",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Requires a JetBrains license"
     },
     {
@@ -103,6 +114,7 @@
       "name": "DataGrip",
       "license_model": "Paid",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Requires a JetBrains license"
     },
     {
@@ -110,6 +122,7 @@
       "name": "Sketch",
       "license_model": "Paid",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Requires an active Sketch license"
     },
     {
@@ -117,6 +130,7 @@
       "name": "Figma",
       "license_model": "Freemium",
       "work_allowed": false,
+      "spdx": "Proprietary",
       "notes": "Free plan prohibits commercial use; Starter/Professional plan required for work"
     },
     {
@@ -124,6 +138,7 @@
       "name": "Visual Studio Code",
       "license_model": "Free",
       "work_allowed": true,
+      "spdx": "MIT",
       "notes": "MIT-licensed; free for personal and commercial use"
     },
     {
@@ -131,6 +146,7 @@
       "name": "Xcode",
       "license_model": "Free",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free on the Mac App Store; Apple Developer Program required for device deployment"
     },
     {
@@ -138,6 +154,7 @@
       "name": "Firefox",
       "license_model": "OpenSource",
       "work_allowed": true,
+      "spdx": "MPL-2.0",
       "notes": "Mozilla Public License 2.0"
     },
     {
@@ -145,6 +162,7 @@
       "name": "Chromium",
       "license_model": "OpenSource",
       "work_allowed": true,
+      "spdx": "BSD-3-Clause",
       "notes": "BSD License"
     },
     {
@@ -152,6 +170,7 @@
       "name": "Google Chrome",
       "license_model": "Free",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free for personal and commercial use"
     },
     {
@@ -159,6 +178,7 @@
       "name": "Safari",
       "license_model": "Free",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Bundled with macOS"
     },
     {
@@ -166,6 +186,7 @@
       "name": "Microsoft Edge",
       "license_model": "Free",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free for personal and commercial use"
     },
     {
@@ -173,6 +194,7 @@
       "name": "Opera",
       "license_model": "Free",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free for personal and commercial use"
     },
     {
@@ -180,6 +202,7 @@
       "name": "1Password 7",
       "license_model": "Paid",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Requires an active 1Password subscription"
     },
     {
@@ -187,6 +210,7 @@
       "name": "1Password",
       "license_model": "Paid",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Requires an active 1Password subscription"
     },
     {
@@ -194,6 +218,7 @@
       "name": "1Password 7 - Password Manager",
       "license_model": "Paid",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Requires an active 1Password subscription"
     },
     {
@@ -201,6 +226,7 @@
       "name": "Bitwarden",
       "license_model": "OpenSource",
       "work_allowed": true,
+      "spdx": "GPL-3.0-only",
       "notes": "GPL-3.0; free for personal and commercial use"
     },
     {
@@ -208,6 +234,7 @@
       "name": "Xcode",
       "license_model": "Free",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free on the Mac App Store"
     },
     {
@@ -215,6 +242,7 @@
       "name": "Slack",
       "license_model": "Freemium",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free plan has message history limits; paid plan required for full functionality"
     },
     {
@@ -222,6 +250,7 @@
       "name": "Slack",
       "license_model": "Freemium",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free plan has message history limits; paid plan required for full functionality"
     },
     {
@@ -229,6 +258,7 @@
       "name": "Microsoft Teams",
       "license_model": "Freemium",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free for personal use; Microsoft 365 license for full work features"
     },
     {
@@ -236,6 +266,7 @@
       "name": "Zoom",
       "license_model": "Freemium",
       "work_allowed": false,
+      "spdx": "Proprietary",
       "notes": "Free plan restricted to 40-minute meetings; paid license required for commercial use without limits"
     },
     {
@@ -243,6 +274,7 @@
       "name": "Zoom",
       "license_model": "Freemium",
       "work_allowed": false,
+      "spdx": "Proprietary",
       "notes": "Free plan restricted to 40-minute meetings; paid license required for commercial use without limits"
     },
     {
@@ -250,6 +282,7 @@
       "name": "Microsoft Word",
       "license_model": "Paid",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Requires Microsoft 365 subscription or one-time purchase license"
     },
     {
@@ -257,6 +290,7 @@
       "name": "Microsoft Excel",
       "license_model": "Paid",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Requires Microsoft 365 subscription or one-time purchase license"
     },
     {
@@ -264,6 +298,7 @@
       "name": "Microsoft PowerPoint",
       "license_model": "Paid",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Requires Microsoft 365 subscription or one-time purchase license"
     },
     {
@@ -271,6 +306,7 @@
       "name": "Pages",
       "license_model": "Free",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free on the Mac App Store"
     },
     {
@@ -278,6 +314,7 @@
       "name": "Numbers",
       "license_model": "Free",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free on the Mac App Store"
     },
     {
@@ -285,6 +322,7 @@
       "name": "Keynote",
       "license_model": "Free",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free on the Mac App Store"
     },
     {
@@ -292,6 +330,7 @@
       "name": "Sublime Text",
       "license_model": "Freemium",
       "work_allowed": false,
+      "spdx": "Proprietary",
       "notes": "Unlimited free evaluation but requires a paid license for continued use, especially in commercial settings"
     },
     {
@@ -299,6 +338,7 @@
       "name": "Sublime Text",
       "license_model": "Freemium",
       "work_allowed": false,
+      "spdx": "Proprietary",
       "notes": "Unlimited free evaluation but requires a paid license for continued use, especially in commercial settings"
     },
     {
@@ -306,6 +346,7 @@
       "name": "Cursor",
       "license_model": "Freemium",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free Hobby plan; Pro plan required for heavier commercial use"
     },
     {
@@ -313,6 +354,7 @@
       "name": "GitHub Desktop",
       "license_model": "Free",
       "work_allowed": true,
+      "spdx": "MIT",
       "notes": "MIT-licensed; free for personal and commercial use"
     },
     {
@@ -320,6 +362,7 @@
       "name": "Tower",
       "license_model": "Paid",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Requires an active Tower license or subscription"
     },
     {
@@ -327,6 +370,7 @@
       "name": "Sourcetree",
       "license_model": "Free",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free for personal and commercial use"
     },
     {
@@ -334,6 +378,7 @@
       "name": "Docker Desktop",
       "license_model": "Freemium",
       "work_allowed": false,
+      "spdx": "Proprietary",
       "notes": "Free for personal use and small businesses (<250 employees, <$10M revenue); paid subscription required otherwise"
     },
     {
@@ -341,6 +386,7 @@
       "name": "OrbStack",
       "license_model": "Freemium",
       "work_allowed": false,
+      "spdx": "Proprietary",
       "notes": "Free during beta; paid license required for commercial use"
     },
     {
@@ -348,6 +394,7 @@
       "name": "Postman",
       "license_model": "Freemium",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free plan available; paid plans for team features"
     },
     {
@@ -355,6 +402,7 @@
       "name": "Insomnia",
       "license_model": "Freemium",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Open-source core; paid plans for collaboration"
     },
     {
@@ -362,6 +410,7 @@
       "name": "Terminal",
       "license_model": "Free",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Bundled with macOS"
     },
     {
@@ -369,6 +418,7 @@
       "name": "iTerm2",
       "license_model": "OpenSource",
       "work_allowed": true,
+      "spdx": "GPL-2.0-only",
       "notes": "GPL-2.0; free for personal and commercial use"
     },
     {
@@ -376,6 +426,7 @@
       "name": "Ghostty",
       "license_model": "OpenSource",
       "work_allowed": true,
+      "spdx": "MIT",
       "notes": "MIT-licensed; free for personal and commercial use"
     },
     {
@@ -383,6 +434,7 @@
       "name": "Warp",
       "license_model": "Freemium",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free for individuals; paid plans for teams"
     },
     {
@@ -390,6 +442,7 @@
       "name": "Warp",
       "license_model": "Freemium",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free for individuals; paid plans for teams"
     },
     {
@@ -397,6 +450,7 @@
       "name": "OrbStack",
       "license_model": "Freemium",
       "work_allowed": false,
+      "spdx": "Proprietary",
       "notes": "Free during beta; paid license required for commercial use"
     },
     {
@@ -404,6 +458,7 @@
       "name": "Claude",
       "license_model": "Freemium",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free tier available; Claude Pro required for higher usage limits"
     },
     {
@@ -411,6 +466,7 @@
       "name": "Claude Code URL Handler",
       "license_model": "Free",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Helper app bundled with Claude Code; free for personal and commercial use"
     },
     {
@@ -418,6 +474,7 @@
       "name": "Bruno",
       "license_model": "OpenSource",
       "work_allowed": true,
+      "spdx": "MIT",
       "notes": "MIT-licensed API client; free for personal and commercial use"
     },
     {
@@ -425,6 +482,7 @@
       "name": "Notion",
       "license_model": "Freemium",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free tier available; paid plans for teams and advanced features"
     },
     {
@@ -432,6 +490,7 @@
       "name": "Telegram",
       "license_model": "OpenSource",
       "work_allowed": true,
+      "spdx": "GPL-2.0-only",
       "notes": "GPL-2.0; free for personal and commercial use"
     },
     {
@@ -439,6 +498,7 @@
       "name": "Cloudflare WARP",
       "license_model": "Freemium",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free for individuals; Cloudflare Zero Trust plan required for enterprise/team use"
     },
     {
@@ -446,6 +506,7 @@
       "name": "Amazon Kindle",
       "license_model": "Free",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free app; content purchases are separate"
     },
     {
@@ -453,6 +514,7 @@
       "name": "Steam",
       "license_model": "Free",
       "work_allowed": false,
+      "spdx": "Proprietary",
       "notes": "Free platform; primarily for personal gaming use — game licenses vary"
     },
     {
@@ -460,6 +522,7 @@
       "name": "Epic Games Launcher",
       "license_model": "Free",
       "work_allowed": false,
+      "spdx": "Proprietary",
       "notes": "Free platform; primarily for personal gaming use — game licenses vary"
     },
     {
@@ -467,6 +530,7 @@
       "name": "LM Studio",
       "license_model": "Freemium",
       "work_allowed": false,
+      "spdx": "Proprietary",
       "notes": "Free for personal and research use; commercial use requires an enterprise license"
     },
     {
@@ -474,6 +538,7 @@
       "name": "OneDrive",
       "license_model": "Freemium",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "5 GB free; expanded storage and business features require Microsoft 365 subscription"
     },
     {
@@ -481,6 +546,7 @@
       "name": "Rambox",
       "license_model": "Freemium",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free tier available; Rambox Pro required for advanced features"
     },
     {
@@ -488,6 +554,7 @@
       "name": "Snipaste",
       "license_model": "Freemium",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free tier available for personal and commercial use; Snipaste Pro adds advanced features"
     },
     {
@@ -502,6 +569,7 @@
       "name": "Firefox",
       "license_model": "OpenSource",
       "work_allowed": true,
+      "spdx": "MPL-2.0",
       "notes": "Mozilla Public License 2.0"
     },
     {
@@ -509,6 +577,7 @@
       "name": "Google Chrome",
       "license_model": "Free",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free for personal and commercial use"
     },
     {
@@ -516,6 +585,7 @@
       "name": "Visual Studio Code",
       "license_model": "Free",
       "work_allowed": true,
+      "spdx": "MIT",
       "notes": "MIT-licensed; free for personal and commercial use"
     },
     {
@@ -523,6 +593,7 @@
       "name": "Slack",
       "license_model": "Freemium",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free plan has message history limits; paid plan required for full functionality"
     },
     {
@@ -530,6 +601,7 @@
       "name": "Discord",
       "license_model": "Free",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free for personal and commercial use"
     },
     {
@@ -537,6 +609,7 @@
       "name": "Spotify",
       "license_model": "Freemium",
       "work_allowed": false,
+      "spdx": "Proprietary",
       "notes": "Free tier has ads and shuffle-only; Spotify Premium required for commercial/background use"
     },
     {
@@ -544,6 +617,7 @@
       "name": "Ungoogled Chromium",
       "license_model": "OpenSource",
       "work_allowed": true,
+      "spdx": "BSD-3-Clause",
       "notes": "BSD License; free for personal and commercial use"
     },
     {
@@ -551,6 +625,7 @@
       "name": "IntelliJ IDEA Community Edition",
       "license_model": "OpenSource",
       "work_allowed": true,
+      "spdx": "Apache-2.0",
       "notes": "Apache 2.0; Community edition is free for personal and commercial use"
     },
     {
@@ -558,6 +633,7 @@
       "name": "IntelliJ IDEA Ultimate",
       "license_model": "Paid",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Requires a JetBrains license"
     },
     {
@@ -565,6 +641,7 @@
       "name": "PyCharm Community Edition",
       "license_model": "OpenSource",
       "work_allowed": true,
+      "spdx": "Apache-2.0",
       "notes": "Apache 2.0; Community edition is free for personal and commercial use"
     },
     {
@@ -572,6 +649,7 @@
       "name": "PyCharm Professional",
       "license_model": "Paid",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Requires a JetBrains license"
     },
     {
@@ -579,6 +657,7 @@
       "name": "Insomnia",
       "license_model": "Freemium",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Open-source core; paid plans for collaboration"
     },
     {
@@ -586,6 +665,7 @@
       "name": "Postman",
       "license_model": "Freemium",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free plan available; paid plans for team features"
     },
     {
@@ -593,6 +673,7 @@
       "name": "Bruno",
       "license_model": "OpenSource",
       "work_allowed": true,
+      "spdx": "MIT",
       "notes": "MIT-licensed API client; free for personal and commercial use"
     },
     {
@@ -600,6 +681,7 @@
       "name": "DBeaver Community",
       "license_model": "OpenSource",
       "work_allowed": true,
+      "spdx": "Apache-2.0",
       "notes": "Apache 2.0; free for personal and commercial use"
     },
     {
@@ -607,6 +689,7 @@
       "name": "DBeaver Enterprise",
       "license_model": "Paid",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Requires a DBeaver Enterprise license"
     },
     {
@@ -614,6 +697,7 @@
       "name": "GIMP",
       "license_model": "OpenSource",
       "work_allowed": true,
+      "spdx": "GPL-3.0-or-later",
       "notes": "GPL-3.0; free for personal and commercial use"
     },
     {
@@ -621,6 +705,7 @@
       "name": "Inkscape",
       "license_model": "OpenSource",
       "work_allowed": true,
+      "spdx": "GPL-2.0-or-later",
       "notes": "GPL-2.0; free for personal and commercial use"
     },
     {
@@ -628,6 +713,7 @@
       "name": "LibreOffice",
       "license_model": "OpenSource",
       "work_allowed": true,
+      "spdx": "MPL-2.0",
       "notes": "MPL-2.0; free for personal and commercial use"
     },
     {
@@ -635,6 +721,7 @@
       "name": "Visual Studio Code",
       "license_model": "Free",
       "work_allowed": true,
+      "spdx": "MIT",
       "notes": "MIT-licensed; free for personal and commercial use"
     },
     {
@@ -642,13 +729,15 @@
       "name": "Telegram",
       "license_model": "OpenSource",
       "work_allowed": true,
-      "notes": "GPL-2.0; free for personal and commercial use"
+      "spdx": "GPL-3.0-or-later",
+      "notes": "GPL-3.0; free for personal and commercial use"
     },
     {
       "bundle_id": "io.github.shiftey.Desktop",
       "name": "GitHub Desktop",
       "license_model": "Free",
       "work_allowed": true,
+      "spdx": "MIT",
       "notes": "MIT-licensed; free for personal and commercial use"
     },
     {
@@ -656,6 +745,7 @@
       "name": "Zed",
       "license_model": "OpenSource",
       "work_allowed": true,
+      "spdx": "AGPL-3.0",
       "notes": "GPL-3.0 / AGPL-3.0; free for personal and commercial use"
     },
     {
@@ -663,6 +753,7 @@
       "name": "Windows Terminal",
       "license_model": "OpenSource",
       "work_allowed": true,
+      "spdx": "MIT",
       "notes": "MIT-licensed; free for personal and commercial use"
     },
     {
@@ -670,6 +761,7 @@
       "name": "Notepad++",
       "license_model": "OpenSource",
       "work_allowed": true,
+      "spdx": "GPL-2.0-or-later",
       "notes": "GPL-2.0; free for personal and commercial use"
     },
     {
@@ -677,6 +769,7 @@
       "name": "7-Zip",
       "license_model": "OpenSource",
       "work_allowed": true,
+      "spdx": "LGPL-2.1-or-later",
       "notes": "LGPL-2.1; free for personal and commercial use"
     },
     {
@@ -684,6 +777,7 @@
       "name": "WinRAR",
       "license_model": "Freemium",
       "work_allowed": false,
+      "spdx": "Proprietary",
       "notes": "Free trial; paid license required for commercial use"
     },
     {
@@ -691,6 +785,7 @@
       "name": "VLC media player",
       "license_model": "OpenSource",
       "work_allowed": true,
+      "spdx": "GPL-2.0-or-later",
       "notes": "GPL-2.0; free for personal and commercial use"
     },
     {
@@ -698,6 +793,7 @@
       "name": "ShareX",
       "license_model": "OpenSource",
       "work_allowed": true,
+      "spdx": "GPL-3.0-only",
       "notes": "GPL-3.0; free for personal and commercial use"
     },
     {
@@ -705,6 +801,7 @@
       "name": "Everything",
       "license_model": "Free",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free for personal and commercial use"
     },
     {
@@ -712,6 +809,7 @@
       "name": "Snipaste",
       "license_model": "Freemium",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free tier available for personal and commercial use; Snipaste Pro adds advanced features"
     },
     {
@@ -719,6 +817,7 @@
       "name": "PowerToys",
       "license_model": "OpenSource",
       "work_allowed": true,
+      "spdx": "MIT",
       "notes": "MIT-licensed Microsoft utility suite; free for personal and commercial use"
     },
     {
@@ -726,6 +825,7 @@
       "name": "Git",
       "license_model": "OpenSource",
       "work_allowed": true,
+      "spdx": "GPL-2.0-only",
       "notes": "GPL-2.0; free for personal and commercial use"
     },
     {
@@ -733,6 +833,7 @@
       "name": "GitHub Desktop",
       "license_model": "Free",
       "work_allowed": true,
+      "spdx": "MIT",
       "notes": "MIT-licensed; free for personal and commercial use"
     },
     {
@@ -740,6 +841,7 @@
       "name": "Docker Desktop",
       "license_model": "Freemium",
       "work_allowed": false,
+      "spdx": "Proprietary",
       "notes": "Free for personal use and small businesses (<250 employees, <$10M revenue); paid subscription required otherwise"
     },
     {
@@ -747,6 +849,7 @@
       "name": "Microsoft Visual Studio Code",
       "license_model": "Free",
       "work_allowed": true,
+      "spdx": "MIT",
       "notes": "MIT-licensed; free for personal and commercial use"
     },
     {
@@ -754,6 +857,7 @@
       "name": "Discord",
       "license_model": "Free",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free for personal and commercial use"
     },
     {
@@ -761,6 +865,7 @@
       "name": "Telegram Desktop",
       "license_model": "OpenSource",
       "work_allowed": true,
+      "spdx": "GPL-3.0-or-later",
       "notes": "GPL-3.0; free for personal and commercial use"
     },
     {
@@ -768,6 +873,7 @@
       "name": "Slack",
       "license_model": "Freemium",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free plan has message history limits; paid plan required for full functionality"
     },
     {
@@ -775,6 +881,7 @@
       "name": "Zoom",
       "license_model": "Freemium",
       "work_allowed": false,
+      "spdx": "Proprietary",
       "notes": "Free plan restricted to 40-minute meetings; paid license required for commercial use without limits"
     },
     {
@@ -782,6 +889,7 @@
       "name": "OBS Studio",
       "license_model": "OpenSource",
       "work_allowed": true,
+      "spdx": "GPL-2.0-or-later",
       "notes": "GPL-2.0; free for personal and commercial use"
     },
     {
@@ -789,6 +897,7 @@
       "name": "Figma",
       "license_model": "Freemium",
       "work_allowed": false,
+      "spdx": "Proprietary",
       "notes": "Free plan prohibits commercial use; Starter/Professional plan required for work"
     },
     {
@@ -796,6 +905,7 @@
       "name": "Notion",
       "license_model": "Freemium",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free tier available; paid plans for teams and advanced features"
     },
     {
@@ -803,6 +913,7 @@
       "name": "Postman",
       "license_model": "Freemium",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Free plan available; paid plans for team features"
     },
     {
@@ -810,6 +921,7 @@
       "name": "Insomnia",
       "license_model": "Freemium",
       "work_allowed": true,
+      "spdx": "Proprietary",
       "notes": "Open-source core; paid plans for collaboration"
     },
     {
@@ -817,6 +929,7 @@
       "name": "Bruno",
       "license_model": "OpenSource",
       "work_allowed": true,
+      "spdx": "MIT",
       "notes": "MIT-licensed API client; free for personal and commercial use"
     }
   ]

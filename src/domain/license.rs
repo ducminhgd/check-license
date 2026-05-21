@@ -1,6 +1,29 @@
 use serde::Deserialize;
 use std::fmt;
 
+pub fn is_oss_spdx(spdx: &str) -> bool {
+    let upper = spdx.trim().to_uppercase();
+
+    const NON_OSS: &[&str] = &[
+        "PROPRIETARY", "COMMERCIAL", "FREEWARE", "SHAREWARE",
+        "ALL RIGHTS RESERVED", "EULA",
+    ];
+    for non_oss in NON_OSS {
+        if upper.contains(non_oss) {
+            return false;
+        }
+    }
+
+    const OSS_PREFIXES: &[&str] = &[
+        "MIT", "APACHE", "GPL", "LGPL", "AGPL", "BSD", "ISC", "MPL", "CDDL",
+        "EPL", "EUPL", "ZLIB", "CC0", "UNLICENSE", "0BSD", "WTFPL",
+        "ARTISTIC", "AFL", "OSL", "NCSA", "CPL", "PHP", "PYTHON",
+        "POSTGRESQL", "RUBY", "W3C", "ZPL", "OFL", "HPND", "CECILL", "LPPL",
+        "CPAL", "RPSL", "SPL", "MS-PL", "MS-RL", "NOKIA", "NTP", "OCLC",
+    ];
+    OSS_PREFIXES.iter().any(|prefix| upper.contains(prefix))
+}
+
 #[derive(Debug, Clone, PartialEq, Deserialize)]
 #[serde(rename_all = "PascalCase")]
 pub enum LicenseModel {

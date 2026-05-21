@@ -17,6 +17,14 @@ pub struct BundledKnowledgeBase {
     apps: Vec<AppRecord>,
 }
 
+impl BundledKnowledgeBase {
+    /// Returns an empty knowledge base. Used when the bundled JSON is unavailable
+    /// or when running in a mode that relies entirely on online/package-manager lookup.
+    pub fn empty() -> Self {
+        Self { apps: Vec::new() }
+    }
+}
+
 impl KnowledgeBase for BundledKnowledgeBase {
     fn load() -> Result<Self, KnowledgeBaseError> {
         let file: KnowledgeBaseFile = serde_json::from_str(KNOWLEDGE_BASE_JSON)

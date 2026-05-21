@@ -1,58 +1,71 @@
 use crate::{
-    application::ports::{ActivationChecker, AppRecord},
+    application::ports::ActivationChecker,
     domain::{app_entry::AppEntry, license::{ActivationStatus, LicenseModel}},
 };
+use std::path::Path;
 
 pub struct MacOsActivationChecker;
 
 impl ActivationChecker for MacOsActivationChecker {
-    fn check(&self, entry: &AppEntry, record: &AppRecord) -> ActivationStatus {
-        // Free / Open Source apps need no activation check.
-        if matches!(record.license_model, LicenseModel::Free | LicenseModel::OpenSource) {
-            return ActivationStatus::NotApplicable;
-        }
+    fn check(&self, entry: &AppEntry, license_model: &LicenseModel) -> ActivationStatus {
+        match license_model {
+            LicenseModel::Free | LicenseModel::OpenSource | LicenseModel::Freemium => {
+                ActivationStatus::NotApplicable
+            }
 
-        // App Store receipt: presence means Apple has verified the purchase.
-        let receipt_path = entry.install_path.join("Contents/_MASReceipt/receipt");
-        if receipt_path.exists() {
-            return ActivationStatus::AppStoreVerified;
-        }
+            LicenseModel::Paid => {
+                // App Store receipt — Apple has verified the purchase.
+                if entry.install_path.join("Contents/_MASReceipt/receipt").exists() {
+                    return ActivationStatus::AppStoreVerified;
+                }
 
-        // For paid apps not from the App Store, check for common license file indicators.
-        // Many apps write a license file, activation plist, or similar under ~/Library.
-        if record.license_model == LicenseModel::Paid {
-            if let Some(home) = dirs::home_dir() {
-                let lib = home.join("Library");
-                // Heuristic: if the app has a support directory under ~/Library/Application Support
-                // with a file named after the app, treat as self-licensed.
-                // This is intentionally conservative — we only set SelfLicensed if there is
-                // positive evidence; absence alone leads to Unactivated.
-                let support_dir = lib
-                    .join("Application Support")
-                    .join(entry.name.replace(' ', ""));
-                if support_dir.exists() && has_license_indicator(&support_dir) {
+                if has_license_evidence(entry) {
                     return ActivationStatus::SelfLicensed;
                 }
-            }
-            return ActivationStatus::Unactivated;
-        }
 
-        ActivationStatus::Unknown
+                ActivationStatus::Unactivated
+            }
+
+            LicenseModel::Unknown => ActivationStatus::Unknown,
+        }
     }
 }
 
-/// Returns true when the directory contains a file whose name suggests it is a
-/// license or activation artifact. Deliberately narrow — false negatives are
-/// preferable to false positives that mask real cracks.
-fn has_license_indicator(dir: &std::path::Path) -> bool {
+fn has_license_evidence(entry: &AppEntry) -> bool {
+    let Some(home) = dirs::home_dir() else { return false };
+
+    let name_slug = entry.name.replace(' ', "");
+    let bundle_id = entry.bundle_id.as_deref().unwrap_or("");
+
+    let app_support = home.join("Library/Application Support");
+    for dir in [app_support.join(&name_slug), app_support.join(bundle_id)] {
+        if dir.exists() && dir_has_license_file(&dir) {
+            return true;
+        }
+    }
+
+    // Some apps embed a license file inside their bundle's Resources folder.
+    let resources = entry.install_path.join("Contents/Resources");
+    if resources.exists() && dir_has_license_file(&resources) {
+        return true;
+    }
+
+    false
+}
+
+/// Returns true when `dir` directly contains a file whose name is a clear
+/// license or activation artifact. Intentionally narrow to avoid false positives.
+fn dir_has_license_file(dir: &Path) -> bool {
     let Ok(entries) = std::fs::read_dir(dir) else { return false };
     for entry in entries.flatten() {
-        let name = entry.file_name();
-        let name_str = name.to_string_lossy().to_lowercase();
-        if name_str.contains("license")
-            || name_str.contains("activation")
-            || name_str.contains("registration")
-            || name_str.ends_with(".lic")
+        let fname = entry.file_name();
+        let n = fname.to_string_lossy().to_lowercase();
+        if n.contains("license")
+            || n.contains("activation")
+            || n.contains("registration")
+            || n.ends_with(".lic")
+            || n.ends_with(".license")
+            || n.ends_with(".key")
         {
             return true;
         }
