@@ -1,0 +1,501 @@
+{
+  "schema_version": 1,
+  "apps": [
+    {
+      "bundle_id": "com.adobe.Photoshop",
+      "name": "Adobe Photoshop",
+      "license_model": "Paid",
+      "work_allowed": true,
+      "notes": "Requires active Creative Cloud subscription",
+      "crack_indicators": {
+        "hosts_entries": ["activate.adobe.com", "practivate.adobe.com", "hl2rcv.adobe.com"],
+        "known_crack_app_bundle_ids": ["com.zii.AdobeZii", "com.painter.GenP"]
+      }
+    },
+    {
+      "bundle_id": "com.adobe.illustrator",
+      "name": "Adobe Illustrator",
+      "license_model": "Paid",
+      "work_allowed": true,
+      "notes": "Requires active Creative Cloud subscription",
+      "crack_indicators": {
+        "hosts_entries": ["activate.adobe.com", "practivate.adobe.com", "hl2rcv.adobe.com"],
+        "known_crack_app_bundle_ids": ["com.zii.AdobeZii", "com.painter.GenP"]
+      }
+    },
+    {
+      "bundle_id": "com.adobe.InDesign",
+      "name": "Adobe InDesign",
+      "license_model": "Paid",
+      "work_allowed": true,
+      "notes": "Requires active Creative Cloud subscription",
+      "crack_indicators": {
+        "hosts_entries": ["activate.adobe.com", "practivate.adobe.com"],
+        "known_crack_app_bundle_ids": ["com.zii.AdobeZii", "com.painter.GenP"]
+      }
+    },
+    {
+      "bundle_id": "com.adobe.Premiere-Pro",
+      "name": "Adobe Premiere Pro",
+      "license_model": "Paid",
+      "work_allowed": true,
+      "notes": "Requires active Creative Cloud subscription",
+      "crack_indicators": {
+        "hosts_entries": ["activate.adobe.com", "practivate.adobe.com"],
+        "known_crack_app_bundle_ids": ["com.zii.AdobeZii", "com.painter.GenP"]
+      }
+    },
+    {
+      "bundle_id": "com.adobe.AfterEffects",
+      "name": "Adobe After Effects",
+      "license_model": "Paid",
+      "work_allowed": true,
+      "notes": "Requires active Creative Cloud subscription",
+      "crack_indicators": {
+        "hosts_entries": ["activate.adobe.com", "practivate.adobe.com"],
+        "known_crack_app_bundle_ids": ["com.zii.AdobeZii", "com.painter.GenP"]
+      }
+    },
+    {
+      "bundle_id": "com.jetbrains.intellij",
+      "name": "IntelliJ IDEA",
+      "license_model": "Freemium",
+      "work_allowed": true,
+      "notes": "Community edition is free; Ultimate requires a paid license"
+    },
+    {
+      "bundle_id": "com.jetbrains.pycharm",
+      "name": "PyCharm",
+      "license_model": "Freemium",
+      "work_allowed": true,
+      "notes": "Community edition is free; Professional requires a paid license"
+    },
+    {
+      "bundle_id": "com.jetbrains.CLion",
+      "name": "CLion",
+      "license_model": "Paid",
+      "work_allowed": true,
+      "notes": "Requires a JetBrains license"
+    },
+    {
+      "bundle_id": "com.jetbrains.goland",
+      "name": "GoLand",
+      "license_model": "Paid",
+      "work_allowed": true,
+      "notes": "Requires a JetBrains license"
+    },
+    {
+      "bundle_id": "com.jetbrains.rubymine",
+      "name": "RubyMine",
+      "license_model": "Paid",
+      "work_allowed": true,
+      "notes": "Requires a JetBrains license"
+    },
+    {
+      "bundle_id": "com.jetbrains.webstorm",
+      "name": "WebStorm",
+      "license_model": "Paid",
+      "work_allowed": true,
+      "notes": "Requires a JetBrains license"
+    },
+    {
+      "bundle_id": "com.jetbrains.datagrip",
+      "name": "DataGrip",
+      "license_model": "Paid",
+      "work_allowed": true,
+      "notes": "Requires a JetBrains license"
+    },
+    {
+      "bundle_id": "com.bohemiancoding.sketch3",
+      "name": "Sketch",
+      "license_model": "Paid",
+      "work_allowed": true,
+      "notes": "Requires an active Sketch license"
+    },
+    {
+      "bundle_id": "com.figma.Desktop",
+      "name": "Figma",
+      "license_model": "Freemium",
+      "work_allowed": false,
+      "notes": "Free plan prohibits commercial use; Starter/Professional plan required for work"
+    },
+    {
+      "bundle_id": "com.microsoft.VSCode",
+      "name": "Visual Studio Code",
+      "license_model": "Free",
+      "work_allowed": true,
+      "notes": "MIT-licensed; free for personal and commercial use"
+    },
+    {
+      "bundle_id": "com.apple.Xcode",
+      "name": "Xcode",
+      "license_model": "Free",
+      "work_allowed": true,
+      "notes": "Free on the Mac App Store; Apple Developer Program required for device deployment"
+    },
+    {
+      "bundle_id": "org.mozilla.firefox",
+      "name": "Firefox",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "Mozilla Public License 2.0"
+    },
+    {
+      "bundle_id": "org.chromium.Chromium",
+      "name": "Chromium",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "BSD License"
+    },
+    {
+      "bundle_id": "com.google.Chrome",
+      "name": "Google Chrome",
+      "license_model": "Free",
+      "work_allowed": true,
+      "notes": "Free for personal and commercial use"
+    },
+    {
+      "bundle_id": "com.apple.Safari",
+      "name": "Safari",
+      "license_model": "Free",
+      "work_allowed": true,
+      "notes": "Bundled with macOS"
+    },
+    {
+      "bundle_id": "com.microsoft.edgemac",
+      "name": "Microsoft Edge",
+      "license_model": "Free",
+      "work_allowed": true,
+      "notes": "Free for personal and commercial use"
+    },
+    {
+      "bundle_id": "com.operasoftware.Opera",
+      "name": "Opera",
+      "license_model": "Free",
+      "work_allowed": true,
+      "notes": "Free for personal and commercial use"
+    },
+    {
+      "bundle_id": "com.1password.1password7-mas",
+      "name": "1Password 7",
+      "license_model": "Paid",
+      "work_allowed": true,
+      "notes": "Requires an active 1Password subscription"
+    },
+    {
+      "bundle_id": "com.1password.1password8",
+      "name": "1Password",
+      "license_model": "Paid",
+      "work_allowed": true,
+      "notes": "Requires an active 1Password subscription"
+    },
+    {
+      "bundle_id": "com.agilebits.onepassword7",
+      "name": "1Password 7 - Password Manager",
+      "license_model": "Paid",
+      "work_allowed": true,
+      "notes": "Requires an active 1Password subscription"
+    },
+    {
+      "bundle_id": "com.bitwarden.desktop",
+      "name": "Bitwarden",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "GPL-3.0; free for personal and commercial use"
+    },
+    {
+      "bundle_id": "com.apple.dt.Xcode",
+      "name": "Xcode",
+      "license_model": "Free",
+      "work_allowed": true,
+      "notes": "Free on the Mac App Store"
+    },
+    {
+      "bundle_id": "com.slack.Slack",
+      "name": "Slack",
+      "license_model": "Freemium",
+      "work_allowed": true,
+      "notes": "Free plan has message history limits; paid plan required for full functionality"
+    },
+    {
+      "bundle_id": "com.tinyspeck.slackmacgap",
+      "name": "Slack",
+      "license_model": "Freemium",
+      "work_allowed": true,
+      "notes": "Free plan has message history limits; paid plan required for full functionality"
+    },
+    {
+      "bundle_id": "com.microsoft.teams2",
+      "name": "Microsoft Teams",
+      "license_model": "Freemium",
+      "work_allowed": true,
+      "notes": "Free for personal use; Microsoft 365 license for full work features"
+    },
+    {
+      "bundle_id": "com.zoom.xos",
+      "name": "Zoom",
+      "license_model": "Freemium",
+      "work_allowed": false,
+      "notes": "Free plan restricted to 40-minute meetings; paid license required for commercial use without limits"
+    },
+    {
+      "bundle_id": "us.zoom.xos",
+      "name": "Zoom",
+      "license_model": "Freemium",
+      "work_allowed": false,
+      "notes": "Free plan restricted to 40-minute meetings; paid license required for commercial use without limits"
+    },
+    {
+      "bundle_id": "com.microsoft.Word",
+      "name": "Microsoft Word",
+      "license_model": "Paid",
+      "work_allowed": true,
+      "notes": "Requires Microsoft 365 subscription or one-time purchase license"
+    },
+    {
+      "bundle_id": "com.microsoft.Excel",
+      "name": "Microsoft Excel",
+      "license_model": "Paid",
+      "work_allowed": true,
+      "notes": "Requires Microsoft 365 subscription or one-time purchase license"
+    },
+    {
+      "bundle_id": "com.microsoft.Powerpoint",
+      "name": "Microsoft PowerPoint",
+      "license_model": "Paid",
+      "work_allowed": true,
+      "notes": "Requires Microsoft 365 subscription or one-time purchase license"
+    },
+    {
+      "bundle_id": "com.apple.iWork.Pages",
+      "name": "Pages",
+      "license_model": "Free",
+      "work_allowed": true,
+      "notes": "Free on the Mac App Store"
+    },
+    {
+      "bundle_id": "com.apple.iWork.Numbers",
+      "name": "Numbers",
+      "license_model": "Free",
+      "work_allowed": true,
+      "notes": "Free on the Mac App Store"
+    },
+    {
+      "bundle_id": "com.apple.iWork.Keynote",
+      "name": "Keynote",
+      "license_model": "Free",
+      "work_allowed": true,
+      "notes": "Free on the Mac App Store"
+    },
+    {
+      "bundle_id": "com.sublimetext.4",
+      "name": "Sublime Text",
+      "license_model": "Freemium",
+      "work_allowed": false,
+      "notes": "Unlimited free evaluation but requires a paid license for continued use, especially in commercial settings"
+    },
+    {
+      "bundle_id": "com.sublimetext.3",
+      "name": "Sublime Text",
+      "license_model": "Freemium",
+      "work_allowed": false,
+      "notes": "Unlimited free evaluation but requires a paid license for continued use, especially in commercial settings"
+    },
+    {
+      "bundle_id": "com.todesktop.230313mzl4w4u92",
+      "name": "Cursor",
+      "license_model": "Freemium",
+      "work_allowed": true,
+      "notes": "Free Hobby plan; Pro plan required for heavier commercial use"
+    },
+    {
+      "bundle_id": "com.github.GitHub",
+      "name": "GitHub Desktop",
+      "license_model": "Free",
+      "work_allowed": true,
+      "notes": "MIT-licensed; free for personal and commercial use"
+    },
+    {
+      "bundle_id": "com.tower2.gittower",
+      "name": "Tower",
+      "license_model": "Paid",
+      "work_allowed": true,
+      "notes": "Requires an active Tower license or subscription"
+    },
+    {
+      "bundle_id": "com.sourcetreeapp.Sourcetree",
+      "name": "Sourcetree",
+      "license_model": "Free",
+      "work_allowed": true,
+      "notes": "Free for personal and commercial use"
+    },
+    {
+      "bundle_id": "com.docker.docker",
+      "name": "Docker Desktop",
+      "license_model": "Freemium",
+      "work_allowed": false,
+      "notes": "Free for personal use and small businesses (<250 employees, <$10M revenue); paid subscription required otherwise"
+    },
+    {
+      "bundle_id": "io.orbstack.OrbStack",
+      "name": "OrbStack",
+      "license_model": "Freemium",
+      "work_allowed": false,
+      "notes": "Free during beta; paid license required for commercial use"
+    },
+    {
+      "bundle_id": "com.postmanlabs.mac",
+      "name": "Postman",
+      "license_model": "Freemium",
+      "work_allowed": true,
+      "notes": "Free plan available; paid plans for team features"
+    },
+    {
+      "bundle_id": "io.insomnia.desktop",
+      "name": "Insomnia",
+      "license_model": "Freemium",
+      "work_allowed": true,
+      "notes": "Open-source core; paid plans for collaboration"
+    },
+    {
+      "bundle_id": "com.apple.Terminal",
+      "name": "Terminal",
+      "license_model": "Free",
+      "work_allowed": true,
+      "notes": "Bundled with macOS"
+    },
+    {
+      "bundle_id": "com.googlecode.iterm2",
+      "name": "iTerm2",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "GPL-2.0; free for personal and commercial use"
+    },
+    {
+      "bundle_id": "com.mitchellh.ghostty",
+      "name": "Ghostty",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "MIT-licensed; free for personal and commercial use"
+    },
+    {
+      "bundle_id": "dev.warp.Warp",
+      "name": "Warp",
+      "license_model": "Freemium",
+      "work_allowed": true,
+      "notes": "Free for individuals; paid plans for teams"
+    },
+    {
+      "bundle_id": "dev.warp.Warp-Stable",
+      "name": "Warp",
+      "license_model": "Freemium",
+      "work_allowed": true,
+      "notes": "Free for individuals; paid plans for teams"
+    },
+    {
+      "bundle_id": "dev.kdrag0n.MacVirt",
+      "name": "OrbStack",
+      "license_model": "Freemium",
+      "work_allowed": false,
+      "notes": "Free during beta; paid license required for commercial use"
+    },
+    {
+      "bundle_id": "com.anthropic.claudefordesktop",
+      "name": "Claude",
+      "license_model": "Freemium",
+      "work_allowed": true,
+      "notes": "Free tier available; Claude Pro required for higher usage limits"
+    },
+    {
+      "bundle_id": "com.anthropic.claude-code-url-handler",
+      "name": "Claude Code URL Handler",
+      "license_model": "Free",
+      "work_allowed": true,
+      "notes": "Helper app bundled with Claude Code; free for personal and commercial use"
+    },
+    {
+      "bundle_id": "com.usebruno.app",
+      "name": "Bruno",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "MIT-licensed API client; free for personal and commercial use"
+    },
+    {
+      "bundle_id": "notion.id",
+      "name": "Notion",
+      "license_model": "Freemium",
+      "work_allowed": true,
+      "notes": "Free tier available; paid plans for teams and advanced features"
+    },
+    {
+      "bundle_id": "ru.keepcoder.Telegram",
+      "name": "Telegram",
+      "license_model": "OpenSource",
+      "work_allowed": true,
+      "notes": "GPL-2.0; free for personal and commercial use"
+    },
+    {
+      "bundle_id": "com.cloudflare.1dot1dot1dot1.macos",
+      "name": "Cloudflare WARP",
+      "license_model": "Freemium",
+      "work_allowed": true,
+      "notes": "Free for individuals; Cloudflare Zero Trust plan required for enterprise/team use"
+    },
+    {
+      "bundle_id": "com.amazon.Lassen",
+      "name": "Amazon Kindle",
+      "license_model": "Free",
+      "work_allowed": true,
+      "notes": "Free app; content purchases are separate"
+    },
+    {
+      "bundle_id": "com.valvesoftware.steam",
+      "name": "Steam",
+      "license_model": "Free",
+      "work_allowed": false,
+      "notes": "Free platform; primarily for personal gaming use — game licenses vary"
+    },
+    {
+      "bundle_id": "com.epicgames.EpicGamesLauncher",
+      "name": "Epic Games Launcher",
+      "license_model": "Free",
+      "work_allowed": false,
+      "notes": "Free platform; primarily for personal gaming use — game licenses vary"
+    },
+    {
+      "bundle_id": "ai.elementlabs.lmstudio",
+      "name": "LM Studio",
+      "license_model": "Freemium",
+      "work_allowed": false,
+      "notes": "Free for personal and research use; commercial use requires an enterprise license"
+    },
+    {
+      "bundle_id": "com.microsoft.OneDrive-mac",
+      "name": "OneDrive",
+      "license_model": "Freemium",
+      "work_allowed": true,
+      "notes": "5 GB free; expanded storage and business features require Microsoft 365 subscription"
+    },
+    {
+      "bundle_id": "com.rambox",
+      "name": "Rambox",
+      "license_model": "Freemium",
+      "work_allowed": true,
+      "notes": "Free tier available; Rambox Pro required for advanced features"
+    },
+    {
+      "bundle_id": "com.Snipaste",
+      "name": "Snipaste",
+      "license_model": "Freemium",
+      "work_allowed": true,
+      "notes": "Free tier available for personal and commercial use; Snipaste Pro adds advanced features"
+    },
+    {
+      "bundle_id": "com.trankynam.GoTiengViet",
+      "name": "GoTiengViet",
+      "license_model": "Free",
+      "work_allowed": true,
+      "notes": "Free Vietnamese input method for macOS"
+    }
+  ]
+}
